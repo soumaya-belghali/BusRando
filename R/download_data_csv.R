@@ -16,7 +16,7 @@
 #' @return No return value.
 #' 
 #' 
-#' collect_data()
+#' download_data_csv()
 #' }
 
 download_data_csv <- function(type, overwrite = FALSE) {

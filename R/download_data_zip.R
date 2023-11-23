@@ -19,7 +19,7 @@
 #' download_data_zip()
 #' }
 
-download_data_zip <- function(overwrite = FALSE) {
+download_data_zip <- function(type, overwrite = FALSE) {
   
   ## Destination location ---- 
   
@@ -27,19 +27,26 @@ download_data_zip <- function(overwrite = FALSE) {
   
   
   ## File names ----
+  if (type == "departments"){
+    filenames_zip <- "france_departments.zip"
+    url <- "https://www.data.gouv.fr/fr/datasets/r/eb36371a-761d-44a8-93ec-3d728bec17ce"
+  }else if (type == "bus_stops"){
+    filenames_zip <- "bus_stops_montpellier.zip"
+    url <- "https://data.montpellier3m.fr/node/13234/download"
+  }
   
-  filenames <- c("france_departments.zip",
-                 "bus_stops_montpellier.zip")
+  #filenames <- c("france_departments.zip",
+  #              "bus_stops_montpellier.zip")
   
   
   ## URL ----
   
-  url <- c("https://www.data.gouv.fr/fr/datasets/r/eb36371a-761d-44a8-93ec-3d728bec17ce",
-           "https://data.montpellier3m.fr/node/13234/download")
+  #url <- c("https://www.data.gouv.fr/fr/datasets/r/eb36371a-761d-44a8-93ec-3d728bec17ce",
+  #         "https://data.montpellier3m.fr/node/13234/download")
   
   ## Loop on files ----
   
-  for (i in 1:length(filenames)) {
+  for (i in 1:length(filenames_zip)) {
     
     
     if (file.exists(file.path(path, i)) && !overwrite) {
@@ -61,15 +68,26 @@ download_data_zip <- function(overwrite = FALSE) {
       ## Download file ----
       
       utils::download.file(url      = url[i],
-                           destfile = file.path(path, filenames[i]), mode = "wb")
+                           destfile = file.path(path, filenames_zip[i]), mode = "wb")
 
       ## Unzip file ----
       
-      utils::download.file(url      = url[i],
-                           destfile = file.path(path, filenames[i]), mode = "wb")
+      if (type == "departments"){
+        filenames <- zip::unzip(here::here("data","raw_data", "france_departments.zip"), 
+                                            exdir = here::here("data","raw_data","france_departments"))
+        
+      }else if (type == "bus_stops"){
+        filenames <- zip::unzip(here::here("data","raw_data", "bus_stops_montpellier.zip"), 
+                   exdir = here::here("data","raw_data","bus_stops_montpellier"))
+      }
+      
+      
+      
     }
   }
   
-  
-  invisible(NULL) 
+  return(here::here("data", "raw_data", filenames))
 }
+
+#zip::unzip(here::here("data","raw_data", "france_departments.zip"), exdir = here::here("data","raw_data","teste"))
+#zip::unzip(here::here("data","raw_data", "bus_stops_montpellier.zip"), exdir = here::here("data","raw_data","teste"))
