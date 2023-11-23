@@ -1,0 +1,31 @@
+---
+title: "BusRando TO DO List"
+format: html
+date: "`r format(Sys.time(), '%Y/%m/%d')`"
+
+---
+
+## Scripts & Functions:
+
+  - 1- Download datasets from websites                              _(Natalia)_
+  - 2- Clean Rando dataset                                          _(Soumaya)_
+  - 3- Clean Bus dataset                                            _(Killian)_
+  - 4- Analysis 1: Number of hikes near to bus stops                _(???)_
+  - 5- Analysis 2: Length of hikes                                  _(???)_
+  - 6- Analysis 3: Roundtrips or not                                _(???)_
+  - 7- Analysis 4: Colour/Difficulty of hikes                       _(???)_
+  - ...
+  - targets pipeline
+
+
+
+## To complete:
+  - DESCRIPTION
+  - README
+
+
+
+## Final outpus:
+  - Quarto document: "practical guide to hikes around Montpellier"
+  - Slides: tomorrow's presentation
+  - Generalise workflow to other cities in France?
