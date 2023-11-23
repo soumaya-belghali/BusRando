@@ -9,6 +9,7 @@ date: "`r format(Sys.time(), '%Y/%m/%d')`"
 
   - 1- Download datasets from websites                              _(Natalia)_
   - 2- Clean Rando dataset                                          _(Soumaya)_
+  - 2bis- Select Cities for Rando                                   _(Killian)_
   - 3- Clean Bus dataset                                            _(Killian)_
   - 4- Analysis 1: Number of hikes near to bus stops                _(???)_
   - 5- Analysis 2: Length of hikes                                  _(???)_
