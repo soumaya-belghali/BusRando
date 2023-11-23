@@ -1,18 +1,29 @@
 Package: BusRando
 Type: Package
-Title: The Title of the Project
+Title: What about taking the bus to go on a hike?
 Version: 0.0.0.9000
 Authors@R: c(
     person(given   = "Soumaya",
            family  = "Belghali",
            role    = c("aut", "cre", "cph"),
-           email   = "soumaya.belghali@cefe.cnrs.fr",
-           comment = c(ORCID = "{{orcid}}")))
-Description: A paragraph providing a full description of the project (on 
-    several lines...)
+           email   = "soumaya.belghali@cefe.cnrs.fr"),
+    person(given   = "Natalia",
+           family  = "Medeiros",
+           role    = c("aut", "cre", "cph"),
+           email   = "nataliaf.medeiros93@gmail.com"),
+    person(given   = "Killian",
+           family  = "Gregory",
+           role    = c("aut", "cre", "cph"),
+           email   = "killian.gregory@cefe.cnrs.fr"))
+Description: This small project lists all hiking trails that can be reached from a nearby bus stop. All you need is a map of bus stops, and the maximal distance you want to walk to reach a hiking trail...!
 URL: https://github.com/soumaya-belghali/BusRando
 BugReports: https://github.com/soumaya-belghali/BusRando/issues
 License: GPL-2
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Imports: 
+    dplyr,
+    here,
+    sf,
+    units
