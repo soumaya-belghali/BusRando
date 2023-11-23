@@ -16,9 +16,9 @@ devtools::document()
 rcompendium::add_dependencies(compendium = ".")
 
 ## Ajout d'un README ----
-rcompendium::add_readme_qmd(type = "compendium")
+rcompendium::add_readme_rmd(type = "compendium")
 ## Conversion du README.Rmd en README.md ----
-quarto::render("README.Qmd")
+rmarkdown::render("README.Rmd")
 
 
 
