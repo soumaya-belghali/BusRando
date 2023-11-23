@@ -62,6 +62,11 @@ download_data_zip <- function(overwrite = FALSE) {
       
       utils::download.file(url      = url[i],
                            destfile = file.path(path, filenames[i]), mode = "wb")
+
+      ## Unzip file ----
+      
+      utils::download.file(url      = url[i],
+                           destfile = file.path(path, filenames[i]), mode = "wb")
     }
   }
   

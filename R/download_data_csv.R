@@ -19,7 +19,7 @@
 #' collect_data()
 #' }
 
-download_data_csv <- function(overwrite = FALSE) {
+download_data_csv <- function(type, overwrite = FALSE) {
   
   ## Destination location ---- 
   
@@ -27,15 +27,21 @@ download_data_csv <- function(overwrite = FALSE) {
   
   
   ## File names ----
-  
-  filenames <- c("hiking_routes.csv", 
-                 "france_cities.csv")
-  
+  if (type == "hike"){
+    filenames <- "hiking_routes.csv"
+    url <- "https://www.data.gouv.fr/fr/datasets/r/77a06e6f-1a38-4c65-95e6-ce0da64d37da"
+  }else if (type == "cities"){
+    filenames <- "france_cities.csv"
+    url <- "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1"
+  }
+  # filenames <- c("hiking_routes.csv", 
+  #                "france_cities.csv")
+
   
   ## URL ----
   
-  url <- c("https://www.data.gouv.fr/fr/datasets/r/77a06e6f-1a38-4c65-95e6-ce0da64d37da",
-           "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1")
+  # url <- c("https://www.data.gouv.fr/fr/datasets/r/77a06e6f-1a38-4c65-95e6-ce0da64d37da",
+  #          "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1")
   
   ## Loop on files ----
   
@@ -67,6 +73,6 @@ download_data_csv <- function(overwrite = FALSE) {
   }
   
   
-  invisible(NULL) 
+  return(here::here("data", "raw_data", filenames)) 
 }
 
