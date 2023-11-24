@@ -2,7 +2,7 @@
 title: "BusRando"
 format:
   revealjs:
-    theme: night
+    theme: white
     transition: slide
     background-transition: fade
     scrollable: true
@@ -11,13 +11,16 @@ format:
 slide-number: true
 date: "2023-11-24"
 date-format: long
+project:
+  echo: false
+  warning: false
 
 ---
 
 ```{r}
-targets::tar_make()
-targets::tar_visnetwork()
+Sys.setenv(TAR_WARN = "false")
 ```
+
 
 
 ## BusRando
@@ -27,16 +30,42 @@ Our project aims to explore the accessibility of hiking tracks around Montpellie
 
 You can acess our project in Github if you want <https://github.com/soumaya-belghali/BusRando>.
 
+![](https://cdn.laetis.fr/i/herault/full/https://www.herault-tourisme.com/uploads/2021/01/1800dmr-5763-002.jpg){style="text-align: center;" fig-align="center" width="80%"}
+
+
 :::
 
 ## Working with Github
 
 We developed our project collaborating with each other through Github: each of us used a different branch 
 
+:::: {.columns}
+
+::: {.column width="50%"}
 ![](figures/git-commits.png){style="text-align: center;" fig-align="center" width="80%"}
+
+:::
+
+::: {.column width="50%"}
+![](https://www.cfact.org/wp-content/uploads/2020/10/Cherry-picking.jpg){style="text-align: center;" fig-align="center" width="80%"}
+:::
+
+::::
+
 
 ## Targets
 
+```{r}
+# targets::tar_make()
+targets::tar_visnetwork(targets_only = TRUE)
+```
+
 
 ## Results
+
+```{r}
+map <- targets::tar_read(map)
+
+map
+```
 
