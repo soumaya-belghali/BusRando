@@ -13,8 +13,8 @@
 #' @export
 
 
-bus_buff <- function (clean_bus, max_dist) {
-  bus_buff <- sf::st_buffer(clean_bus, max_dist)
+bus_buff <- function (bus_clean, max_dist) {
+  bus_buff <- sf::st_buffer(bus_clean, max_dist)
   return(bus_buff)
 }
 

@@ -26,7 +26,14 @@ list(
   
   tar_target(hike, clean_hike_data(hiking_routes)),
   tar_target(departement_filtered, filter_departement_data(departement, dep_code)),
-  tar_target(hike_filtered, filter_hike_data(hike, departement_filtered))
+  tar_target(hike_filtered, filter_hike_data(hike, departement_filtered)),
+  tar_target(bus_clean, bus_clean(bus)),
+  tar_target(bus_buff,bus_buff(bus_clean, max_dist)),
+  tar_target(inters_bus_hike,inters_bus_hike(bus_buff,hike_filtered)),
+  tar_target(inters_hike_bus,inters_hike_bus(hike_filtered,bus_buff))
+  # Analyse1 : Nb de randos par stations de bus
+  
+  
   
   
 )

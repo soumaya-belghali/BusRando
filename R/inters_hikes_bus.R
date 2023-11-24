@@ -11,7 +11,7 @@
 
 
 inters_hike_bus<- function (hike_filtered,bus_buff) {
-  inter<-st_intersects(hike_filtered,bus_buff)
-  return()
+  inter<-sf::st_intersects(hike_filtered,bus_buff)
+  return(inter)
 }
 
