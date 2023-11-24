@@ -16,10 +16,10 @@ devtools::document()
 rcompendium::add_dependencies(compendium = ".")
 
 ## Ajout d'un README ----
-rcompendium::add_readme_rmd(type = "compendium")
-## Conversion du README.Rmd en README.md ----
-rmarkdown::render("README.Rmd")
-
+# rcompendium::add_readme_rmd(type = "compendium")
+# ## Conversion du README.Rmd en README.md ----
+# rmarkdown::render("README.Rmd")
+# 
 
 
 ## Installation des packages manquants ----
