@@ -9,9 +9,9 @@
 #' @export
 
 
-inters_hike_bus<- function (hike_filtered,bus_buff) {
-  inter<-st_intersects(hike_filtered,bus_buff)
-  return()
+inters_bus_hike<- function (bus_buff,hike_filtered) {
+  inter<-sf::st_intersects(bus_buff,hike_filtered)
+  return(inter)
 }
 
 

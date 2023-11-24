@@ -29,7 +29,7 @@ remotes::install_deps(upgrade = "never")
 devtools::load_all()
 
 targets::tar_make()
-targets::tar_visnetwork()
+targets::tar_visnetwork(targets_only = TRUE)
 
 
 

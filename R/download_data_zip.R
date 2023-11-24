@@ -29,9 +29,11 @@ download_data_zip <- function(type, overwrite = FALSE) {
   ## File names ----
   if (type == "departments"){
     filenames_zip <- "france_departments.zip"
+    filenames_shp <- "france_departments/departements-20180101.shp"
     url <- "https://www.data.gouv.fr/fr/datasets/r/eb36371a-761d-44a8-93ec-3d728bec17ce"
   }else if (type == "bus_stops"){
     filenames_zip <- "bus_stops_montpellier.zip"
+    filenames_shp <- "bus_stops_montpellier/MMM_MMM_ArretsBus.shp"
     url <- "https://data.montpellier3m.fr/node/13234/download"
   }
   
@@ -73,11 +75,10 @@ download_data_zip <- function(type, overwrite = FALSE) {
       ## Unzip file ----
       
       if (type == "departments"){
-        filenames <- zip::unzip(here::here("data","raw_data", "france_departments.zip"), 
+        zip::unzip(here::here("data","raw_data", "france_departments.zip"), 
                                             exdir = here::here("data","raw_data","france_departments"))
-        
       }else if (type == "bus_stops"){
-        filenames <- zip::unzip(here::here("data","raw_data", "bus_stops_montpellier.zip"), 
+        zip::unzip(here::here("data","raw_data", "bus_stops_montpellier.zip"), 
                    exdir = here::here("data","raw_data","bus_stops_montpellier"))
       }
       
@@ -86,7 +87,7 @@ download_data_zip <- function(type, overwrite = FALSE) {
     }
   }
   
-  return(here::here("data", "raw_data", filenames))
+  return(here::here("data", "raw_data", filenames_shp))
 }
 
 #zip::unzip(here::here("data","raw_data", "france_departments.zip"), exdir = here::here("data","raw_data","teste"))

@@ -10,7 +10,7 @@
 #' @export
 
 bus_clean<- function (bus){
-  
+  bus<-sf::st_read(here::here(bus))
   bus$commune<-tolower(bus$commune)
   bus$commune<- gsub("-", " ", bus$commune)
   bus$commune<- gsub("é", "e", bus$commune)
@@ -20,6 +20,7 @@ bus_clean<- function (bus){
   bus$commune<- gsub("î", "i", bus$commune)
   bus$commune<- gsub("'", " ", bus$commune)
   bus<-sf::st_transform(bus,2154)
+  return(bus)
   
 }
 

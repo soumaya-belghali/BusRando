@@ -1,0 +1,20 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+bus|stem|6eacdc0a8544c2ef|111ccc0579a8df74|047b2a677f00569a|-713569950|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/bus_stops_montpellier/MMM_MMM_ArretsBus.shp|t19685.0487037037s|5e2f19b4df2b9d8b|31460|file|local|vector|||0.7||
+bus_buff|stem|d4a88b426c6fb152|0794efd5f82e1e3c|0eb7ee2c4012f9fb|-1501677948||t19685.5070729494s|39277f4e13fecdb7|1156819|rds|local|vector|||0.37||
+bus_clean|stem|df408013df4264d0|908f6541a22af25c|0e7b4c2c65bd5234|-2078082322||t19685.4754627827s|a878e9d14c49036c|28982|rds|local|vector|||0.42||
+clean_hike_data|function|1c3015184c7e09a5|||||||||||||||
+dep_code|stem|150c65b2b39fbd1b|d4570e9d62df3d87|ef46db3751d8e999|735163814||t19685.4750269985s|b6d2e014b07bc296|51|rds|local|vector|||0||
+departement|stem|ec7631108e4d3da0|546826d24c71610c|047b2a677f00569a|1587597510|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/france_departments/departements-20180101.shp|t17535.4436574074s|887c645f7a4a39dc|29822884|file|local|vector|||4.83||
+departement_filtered|stem|335dd04db8b7bbe6|18ade450482d55a9|d79096a2036201cf|720175784||t19685.4754699379s|c1c4cb2d9cd7d556|150824|rds|local|vector|||0.23||
+download_data_csv|function|23c0667c67307560|||||||||||||||
+download_data_zip|function|14ffd129e187ce33|||||||||||||||
+ff|function|8f2afe927f9b40ba|||||||||||||||
+filter_departement_data|function|fd750ede01467111|||||||||||||||
+filter_hike_data|function|35ee340969d8da1a|||||||||||||||
+france_cities|stem|e8274226f9fbab5e|e9ecef89a5989d1f|85f59f62bb92ae11|568540170|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/france_cities.csv|t19685.4744641342s|e56a0a11a16a878e|4289264|file|local|vector|||2.27||
+hike|stem|bf87a0aa87281e8c|b11e364ef3583548|a5e0201e69d8c8be|1499560390||t19685.4754433084s|2a91518f14611fb0|101183599|rds|local|vector|||22.47||
+hike_filtered|stem|7bb936968392611a|cf4c1845c831718e|090a1d0b1d050e21|-85817074||t19685.4755078179s|30bd2afee33b854d|2157488|rds|local|vector|||1.66|attribute variables are assumed to be spatially constant throughout all geometries|
+hiking_routes|stem|2f78788e0b00c9f6|a6c77ad8339c2024|85f59f62bb92ae11|538387884|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/hiking_routes.csv|t19685.4750146107s|c9ff75391a6abfdb|301274357|file|local|vector|||47.47||
+inters_bus_hike|stem|ae1dd09a95293a52|8fd9aeeffa2c7ee7|6d64d331e9f7f851|-378462974||t19685.5070879957s|45ffbd1e22a1fd76|904|rds|local|vector|||0.11||
+inters_hike_bus|stem|31d866de1b44a91f|1199fbc8d0f037aa|6d64d331e9f7f851|-74725263||t19685.507080328s|37212b9ac35b7c54|2041|rds|local|vector|||0.05||
+max_dist|stem|249171c3bcbc422c|056581ba14330799|ef46db3751d8e999|-1728624337||t19685.5070543619s|c9aaea90a821e608|53|rds|local|vector|||0||
