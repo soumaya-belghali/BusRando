@@ -12,7 +12,7 @@
 #' @examples
 
 clean_hike_data <- function(raw_hike){
-  # raw_hike <- read.csv(here::here("data", "hike_data", "france_hiking_foot_routes_line.csv"))
+  raw_hike <- read.csv(here::here(raw_hike))
   
   hike <- raw_hike |> 
     dplyr::select(osm_id, route, name, short_name, 

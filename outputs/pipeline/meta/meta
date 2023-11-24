@@ -1,0 +1,18 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+bus|stem|6eacdc0a8544c2ef|111ccc0579a8df74|047b2a677f00569a|-713569950|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/bus_stops_montpellier/MMM_MMM_ArretsBus.shp|t19685.0487037037s|5e2f19b4df2b9d8b|31460|file|local|vector|||1.03||
+bus_buff|function|0d8bb26d3b1b03c5|||||||||||||||
+bus_clean|function|db134d8afeaa6109|||||||||||||||
+clean_hike_data|function|1c3015184c7e09a5|||||||||||||||
+dep_code|stem|150c65b2b39fbd1b|d4570e9d62df3d87|ef46db3751d8e999|735163814||t19685.418422649s|b6d2e014b07bc296|51|rds|local|vector|||0||
+departement|stem|ec7631108e4d3da0|546826d24c71610c|047b2a677f00569a|1587597510|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/france_departments/departements-20180101.shp|t17535.4436574074s|887c645f7a4a39dc|29822884|file|local|vector|||5.61||
+departement_filtered|stem|335dd04db8b7bbe6|18ade450482d55a9|d79096a2036201cf|720175784||t19685.4372957158s|c1c4cb2d9cd7d556|150824|rds|local|vector|||1.12||
+download_data_csv|function|23c0667c67307560|||||||||||||||
+download_data_zip|function|14ffd129e187ce33|||||||||||||||
+filter_departement_data|function|fd750ede01467111|||||||||||||||
+filter_hike_data|function|35ee340969d8da1a|||||||||||||||
+france_cities|stem|e8274226f9fbab5e|e9ecef89a5989d1f|85f59f62bb92ae11|568540170|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/france_cities.csv|t19685.417699726s|e56a0a11a16a878e|4289264|file|local|vector|||2.65||
+hike|stem|bf87a0aa87281e8c|b11e364ef3583548|a5e0201e69d8c8be|1499560390||t19685.4325967784s|2a91518f14611fb0|101183599|rds|local|vector|||22.19||
+hike_filtered|stem|7bb936968392611a|cf4c1845c831718e|090a1d0b1d050e21|-85817074||t19685.4373445649s|30bd2afee33b854d|2157488|rds|local|vector|||1.76|attribute variables are assumed to be spatially constant throughout all geometries|
+hiking_routes|stem|2f78788e0b00c9f6|a6c77ad8339c2024|85f59f62bb92ae11|538387884|D:/Documents/These CEFE/Formations/Recherche reproductible - FRB_CESAB/BusRando/data/raw_data/hiking_routes.csv|t19685.431622103s|c9ff75391a6abfdb|301274357|file|local|vector|||51.72||
+inters_hike_bus|function|62aea49772d07104|||||||||||||||
+max_dist|stem|bf0b252e67b071e4|2adfd91f4a261588|ef46db3751d8e999|-1728624337||t19685.4184321862s|c9aaea90a821e608|53|rds|local|vector|||0||
