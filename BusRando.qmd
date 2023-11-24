@@ -9,29 +9,34 @@ format:
     css: assets/custom.css
     chalkboard: true
 slide-number: true
-self-contained: falseeditor: visual
-author:
-  - name: "Natalia"
-    url: https://github.com/nataliafmedeiros
 date: "2023-11-24"
 date-format: long
 
 ---
 
+```{r}
+targets::tar_make()
+targets::tar_visnetwork()
+```
+
+
 ## BusRando
 
-Our project aims to explore the acessibility of hiking tracks around Montpellier by bus.{style="text-align: center} 
+::: {.incremental}
+Our project aims to explore the accessibility of hiking tracks around Montpellier by bus.
+
 You can acess our project in Github if you want <https://github.com/soumaya-belghali/BusRando>.
 
+:::
 
 ## Working with Github
 
 We developed our project collaborating with each other through Github: each of us used a different branch 
 
-![](/git-commits.png){style="text-align: center;" fig-align="center" width="80%"}
+![](figures/git-commits.png){style="text-align: center;" fig-align="center" width="80%"}
 
 ## Targets
-![](figure){style="text-align: center;" fig-align="center" width="80%"}
+
 
 ## Results
-![](figure){style="text-align: center;" fig-align="center" width="80%"}
+
