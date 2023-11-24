@@ -14,7 +14,7 @@
 #' @examples
 
 filter_departement_data <- function(departement, dep_code){
-  # departement <- sf::st_read(here::here("data", "department_data", "departements-20180101.shp"))
+  departement <- sf::st_read(here::here(departement))
   # dep_code = c(34)
   
   for (d in 1:length(dep_code)){
