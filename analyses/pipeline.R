@@ -13,7 +13,7 @@ tar_source()
 ## Pipeline:
 list(
   tar_target(dep_code, c(34)),
-  tar_target(max_dist, 5000),
+  tar_target(max_dist, 1000),
   
   tar_target(hiking_routes, download_data_csv(type = "hike"),
              format = "file"),
@@ -30,10 +30,10 @@ list(
   tar_target(bus_clean, bus_clean(bus)),
   tar_target(bus_buff,bus_buff(bus_clean, max_dist)),
   tar_target(inters_bus_hike,inters_bus_hike(bus_buff,hike_filtered)),
-  tar_target(inters_hike_bus,inters_hike_bus(hike_filtered,bus_buff))
-  # Analyse1 : Nb de randos par stations de bus
+  tar_target(inters_hike_bus,inters_hike_bus(hike_filtered,bus_buff)),
   
+  # Analyse1 : Nb de randos par stations de bus...
+  tar_target(map, map_bus_hikes(hike_filtered, bus_clean, bus_buff, inters_hike_bus, inters_bus_hike))
   
-  
-  
+  # tar_render(BusRando, "BusRando.Qmd")
 )

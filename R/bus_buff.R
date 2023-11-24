@@ -15,6 +15,7 @@
 
 bus_buff <- function (bus_clean, max_dist) {
   bus_buff <- sf::st_buffer(bus_clean, max_dist)
+  # sf::st_write(bus_buff, here::here("outputs", "bus_buff.shp"))
   return(bus_buff)
 }
 
